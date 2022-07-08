@@ -20,6 +20,7 @@
         </div>
         <div id="unity-warning"> </div>
         <div id="unity-footer">
+            <div id="unity-webgl-logo"></div>
             <div id="unity-fullscreen-button"></div>
             <div id="unity-build-title">Demo-Sanborns</div>
         </div>
@@ -93,7 +94,7 @@
             canvas.style.width = window.innerWidth + 'px';
             canvas.style.height = window.innerHeight + 'px';
 
-            //unityShowBanner('WebGL builds are not supported on mobile devices.');
+            unityShowBanner('WebGL builds are not supported on mobile devices.');
 
             jQuery(function($) {
                 var windowWidth = $(window).width();
