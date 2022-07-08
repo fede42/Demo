@@ -108,9 +108,11 @@
 
                         } else {
                             //location.reload();
-                            var canvas = document.querySelector("#unity-canvas");
-                            canvas.style.width = window.innerWidth + 'px';
-                            canvas.style.height = window.innerHeight + 'px';
+                            setTimeout(function() {
+                                var canvas = document.querySelector("#unity-canvas");
+                                canvas.style.width = window.innerWidth + 'px';
+                                canvas.style.height = window.innerHeight + 'px';
+                            }, 300);
                             //document.write("This is a tablet or desktop.");
                         }
                         return;
@@ -120,10 +122,16 @@
 
             $(window).on("orientationchange", function(event) {
                 //location.reload();
-                var canvas = document.querySelector("#unity-canvas");
-                canvas.style.width = window.innerWidth + 'px';
-                canvas.style.height = window.innerHeight + 'px';
+                setTimeout(function() {
+                    //do something special
+                    var canvas = document.querySelector("#unity-canvas");
+                    canvas.style.width = window.innerWidth + 'px';
+                    canvas.style.height = window.innerHeight + 'px';
+                }, 300);
             });
+
+
+
 
         } else {
             // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
