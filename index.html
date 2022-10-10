@@ -90,10 +90,14 @@
 
             // To lower canvas resolution on mobile devices to gain some
             // performance, uncomment the following line:
-            // config.devicePixelRatio = 1;
+            config.devicePixelRatio = 1;
 
-            canvas.style.width = window.innerWidth + 'px';
-            canvas.style.height = window.innerHeight + 'px';
+            setTimeout(function() {
+                //do something special
+                var canvas = document.querySelector("#unity-canvas");
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+            }, 500);
 
             //unityShowBanner('WebGL builds are not supported on mobile devices.');
 
@@ -113,7 +117,7 @@
                                 var canvas = document.querySelector("#unity-canvas");
                                 canvas.style.width = window.innerWidth + 'px';
                                 canvas.style.height = window.innerHeight + 'px';
-                            }, 5000);
+                            }, 500);
                             //document.write("This is a tablet or desktop.");
                         }
                         return;
